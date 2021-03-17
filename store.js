@@ -13,7 +13,8 @@ const initialState = {
 function initStore(preloadedState = initialState) {
   return configureStore({
     reducer,
-    preloadedState
+    preloadedState,
+    devTools: process.env.NODE_ENV !== 'production'
   })
 }
 
