@@ -4,6 +4,7 @@ import useResizeHandler from "../hooks/useResizeHandler";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
+import Undraw from "react-undraw";
 
 
 export default function Index() {
@@ -27,6 +28,9 @@ export default function Index() {
                           <Typography variant="h6" color="textSecondary">Find out how much you can save</Typography>
                       </Button>
                   </Grid>
+              </Grid>
+              <Grid xs={12}>
+                  <Undraw name="coding" />
               </Grid>
           </Grid>
       </Box>
