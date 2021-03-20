@@ -1,28 +1,34 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import useResizeHandler from "../hooks/useResizeHandler";
 import Typography from "@material-ui/core/Typography";
-import {useDispatch, useSelector} from "react-redux";
-import {decrement, increment, reset} from "../reducers/slices/counter";
 import Button from "@material-ui/core/Button";
+import Box from "@material-ui/core/Box";
+
 
 export default function Index() {
-  const count = useSelector(state => state.counter.count)
-  const dispatch = useDispatch();
-  return <Grid container justify="center">
-    <Grid container item xs={12} justify="center">
-      <Typography variant="h1">Hello from Material-UI!</Typography>
-    </Grid>
-    <Grid container item xs={12} justify="center">
-      <Typography variant="h3">Count is: {count}</Typography>
-    </Grid>
-    <Grid container item xs={3} justify="center">
-      <Button variant="outlined" color="primary" onClick={() => dispatch(increment())}>+</Button>
-    </Grid>
-    <Grid container item xs={3} justify="center">
-      <Button variant="outlined" color="primary" onClick={() => dispatch(decrement())}>-</Button>
-    </Grid>
-    <Grid container item xs={3} justify="center">
-      <Button variant="outlined" color="primary" onClick={() => dispatch(reset())}>Reset</Button>
-    </Grid>
-  </Grid>
+    const [isMobile] = useResizeHandler()
+  return (
+      <Box m={2}>
+          <Grid container>
+              <Grid xs={12} item container justify="center">
+                  <img src="/images/logo.png" style={{width: isMobile ? '100%' : '40%'}} />
+              </Grid>
+              <Grid xs={12} item container justify="center">
+                  <Typography variant="h2" gutterBottom>
+                      <Box textAlign="center">
+                          A Heat Solution for the Modern Age
+                      </Box>
+                  </Typography>
+              </Grid>
+              <Grid xs={12} item container>
+                  <Grid item container justify="center">
+                      <Button size="large" variant="contained" color="primary">
+                          <Typography variant="h6" color="textSecondary">Find out how much you can save</Typography>
+                      </Button>
+                  </Grid>
+              </Grid>
+          </Grid>
+      </Box>
+  )
 }

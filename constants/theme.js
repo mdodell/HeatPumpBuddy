@@ -3,8 +3,8 @@ import { css } from 'styled-components';
 
 export const Theme = {
     color: {
-        primary: "#3d5afe",
-        secondary: "#d50000",
+        primary: "#8CD8D2",
+        secondary: "#c3e7e2",
         black: '#232323',
         gray: '#707070',
         white: '#fff'
@@ -27,7 +27,7 @@ export const materialUITheme = {
         },
         text: {
             primary: Theme.color.black,
-            secondary: Theme.color.gray
+            secondary: Theme.color.white
         },
     }
 };
