@@ -22,7 +22,7 @@ export default function Index() {
       <Box m={2}>
           <FullPageGrid container direction="column" justify="space-around">
               <Grid item container justify="center">
-                  <img src="/images/logo.png" style={{width: isMobile ? '80%' : '40%'}} />
+                  <img src="/images/logo.png" style={{width: isMobile ? '80%' : '40%', height: isMobile ? '80%' : '100%'}} />
               </Grid>
               <Grid item container justify="center">
                   <Typography variant="h2" gutterBottom>

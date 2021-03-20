@@ -11,7 +11,6 @@ import Divider from "@material-ui/core/Divider";
 import Link from "next/link";
 
 function SideBar({setDrawer, setDrawerOpen}) {
-    const [isMobile] = useResizeHandler();
 
     return (
         <Drawer anchor='left' open={setDrawer} onClose={() => setDrawerOpen( false)}>
