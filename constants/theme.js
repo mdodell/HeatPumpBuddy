@@ -27,7 +27,7 @@ export const materialUITheme = {
         },
         text: {
             primary: Theme.color.black,
-            secondary: Theme.color.white
+            secondary: Theme.color.gray
         },
     }
 };

@@ -1,18 +1,19 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import useResizeHandler from "../hooks/useResizeHandler";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
-import Logo from '../assets/svgs/logo.svg'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { motion } from 'framer-motion';
 import { FullPage, Slide } from 'react-full-page';
-
+import {AbsoluteGrid, FullGridItem, FullPageGrid} from "../components/Grids";
+import Suburbs from '../assets/svgs/suburbs.svg'
+import BuildYourHome from '../assets/svgs/build_your_home.svg';
+import AtHome from '../assets/svgs/at_home.svg';
+import useResizeHandler from "../hooks/useResizeHandler";
 
 export default function Index() {
-    const [isMobile] = useResizeHandler();
-
+    const [isMobile] = useResizeHandler()
     const bounceTransition = {
         y: {
             duration: 0.4,
@@ -23,10 +24,15 @@ export default function Index() {
   return (
       <FullPage>
           <Slide>
-              <Grid container justify="center" style={{height: '100%'}}>
-                  <Grid container item justify="center" style={{marginTop: '6rem'}}>
-                          <Logo />
-                  </Grid>
+              <FullPageGrid container justify="center" alignItems="center">
+                  <AbsoluteGrid container>
+                      <Grid item xs={12} md={6} container alignItems="flex-end">
+                        <Suburbs />
+                      </Grid>
+                      {!isMobile && <Grid item md={6} container alignItems="flex-end">
+                        <BuildYourHome />
+                      </Grid>}
+                  </AbsoluteGrid>
                   <Grid item xs={12}>
                       <Typography variant="h2" gutterBottom>
                           <Box textAlign="center">
@@ -46,38 +52,32 @@ export default function Index() {
                           <ExpandMoreIcon fontSize="large" />
                       </motion.div>
                   </Grid>
-              </Grid>
+              </FullPageGrid>
           </Slide>
           <Slide>
-              <h1>Test</h1>
+              <FullPageGrid container justify="center" alignItems="center">
+                  <AbsoluteGrid container>
+                      <Grid item xs={12} md={6} container alignItems="flex-end">
+                          <AtHome />
+                      </Grid>
+                  </AbsoluteGrid>
+                  <Grid item xs={6}>
+
+                  </Grid>
+                  <FullGridItem item xs={6} container alignContent="space-between">
+                      <Typography variant="h2" gutterBottom>
+                          <Box textAlign="center">
+                              Our Solution
+                          </Box>
+                      </Typography>
+                      <Typography variant="h2" gutterBottom>
+                          <Box textAlign="center">
+                              A Heat Solution for the Modern Age
+                          </Box>
+                      </Typography>
+                  </FullGridItem>
+              </FullPageGrid>
           </Slide>
       </FullPage>
-
-          // <FullPageGrid container direction="column" justify="space-around">
-          //     <Grid item container justify="center">
-          //         <img src="/images/logo.png" style={{width: isMobile ? '80%' : '40%', height: isMobile ? '80%' : '100%'}} />
-          //     </Grid>
-          //     <Grid item container justify="center">
-          //         <Typography variant="h2" gutterBottom>
-          //             <Box textAlign="center">
-          //                 A Heat Solution for the Modern Age
-          //             </Box>
-          //         </Typography>
-          //     </Grid>
-          //     <Grid item container>
-          //         <Grid item container justify="center">
-          //             <Button size="large" variant="contained" color="primary">
-          //                 <Typography variant="h6" color="textSecondary">Find out how much you can save</Typography>
-          //             </Button>
-          //         </Grid>
-          //     </Grid>
-          //     <Grid container item justify="center">
-          //         <motion.div transition={bounceTransition} animate={{
-          //             y: ["25%", "-25%"]
-          //         }}>
-          //             <ExpandMoreIcon fontSize="large" />
-          //         </motion.div>
-          //     </Grid>
-          // </FullPageGrid>
   )
 }

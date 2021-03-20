@@ -7,7 +7,6 @@ import { useStore } from '../store'
 import theme, {muiTheme} from "../constants/theme";
 import Header from "../components/Header";
 
-
 export default function App({ Component, pageProps }) {
     useEffect(() => {
         // Remove the server-side injected CSS.

@@ -16,7 +16,7 @@ function Header() {
     const router = useRouter();
 
     return (
-        <NavBar position="fixed">
+        <NavBar>
             <Toolbar>
                 <Grid container justify="space-between">
                     <Grid xs={4} item container justify="flex-start" alignItems="center">
@@ -24,8 +24,8 @@ function Header() {
                             <Hamburger />
                         </IconButton>
                     </Grid>
-                    <Grid xs={4} item container justify="center" alignItems="center">
-                        <Box textAlign="center" fontWeight="bold">
+                    <Grid xs={4} item container alignItems="center" justify="center">
+                        <Box textAlign="center" fontWeight="bold" alignItems="center">
                             <motion.div
                                 whileHover={{scale: 1.05}}
                             >
