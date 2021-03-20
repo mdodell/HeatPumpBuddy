@@ -13,7 +13,7 @@ import Link from "next/link";
 function SideBar({setDrawer, setDrawerOpen}) {
 
     return (
-        <Drawer anchor='left' open={setDrawer} onClose={() => setDrawerOpen( false)}>
+        <Drawer anchor='left' open={setDrawer} onClose={() => setDrawerOpen(false)}>
             <Grid container direction="column">
                 <Box display="flex" justifyContent="flex-end" m={2}>
                     <CloseDrawer onClick={() => setDrawerOpen(false)}>
@@ -22,13 +22,13 @@ function SideBar({setDrawer, setDrawerOpen}) {
                 </Box>
                 <Lottie animationData={JSON.parse(globeAnimation)} />
                 <SideBarLink>
-                    <Link href="/calculator"><A>Connect to a Heat Pump Coach</A></Link>
+                    <Link href="/calculator"><A onClick={() => setDrawerOpen(false)}>Connect to a Heat Pump Coach</A></Link>
                     <Box mt={2}>
                         <Divider />
                     </Box>
                 </SideBarLink>
                 <SideBarLink>
-                    <Link href="/calculator"><A>What is a Heat Pump?</A></Link>
+                    <Link href="/calculator"><A onClick={() => setDrawerOpen(false)}>What is a Heat Pump?</A></Link>
                     <Box mt={2}>
                         <Divider />
                     </Box>
