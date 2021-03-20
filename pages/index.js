@@ -7,10 +7,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { motion } from 'framer-motion';
 import { FullPage, Slide } from 'react-full-page';
 import {AbsoluteGrid, FullGridItem, FullPageGrid} from "../components/Grids";
-import Suburbs from '../assets/svgs/suburbs.svg'
-import BuildYourHome from '../assets/svgs/build_your_home.svg';
-import AtHome from '../assets/svgs/at_home.svg';
 import useResizeHandler from "../hooks/useResizeHandler";
+import {SVG} from "../components/SVG";
 
 export default function Index() {
     const [isMobile] = useResizeHandler()
@@ -27,10 +25,10 @@ export default function Index() {
               <FullPageGrid container justify="center" alignItems="center">
                   <AbsoluteGrid container>
                       <Grid item xs={12} md={6} container alignItems="flex-end">
-                        <Suburbs />
+                          <SVG src="/svgs/suburbs.svg" alt="suburbs"/>
                       </Grid>
                       {!isMobile && <Grid item md={6} container alignItems="flex-end">
-                        <BuildYourHome />
+                        <SVG src="/svgs/build_your_home.svg" alt="Home" />
                       </Grid>}
                   </AbsoluteGrid>
                   <Grid item xs={12}>
@@ -58,7 +56,7 @@ export default function Index() {
               <FullPageGrid container justify="center" alignItems="center">
                   <AbsoluteGrid container>
                       <Grid item xs={12} md={6} container alignItems="flex-end">
-                          <AtHome />
+                          <SVG src="/svgs/at_home.svg" alt="suburbs"/>
                       </Grid>
                   </AbsoluteGrid>
                   <Grid item xs={6}>

@@ -42,7 +42,7 @@ function Calculator(props) {
                                 <form onSubmit={handleSubmit} noValidate>
                                     <Grid container alignItems="flex-start" spacing={2}>
                                         <Grid item xs={12}>
-                                            <TextField required name="sqft" />
+                                            <TextField required name="sqft" type="number" />
                                         </Grid>
                                         <Grid item xs={6}>
                                             <Button

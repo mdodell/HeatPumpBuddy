@@ -39,6 +39,7 @@ class MyDocument extends Document {
             <Html lang="en" dir="ltr">
                 <Head>
                     <meta charSet="utf-8" />
+                    <meta httpEquiv="content-type" content="application/xhtml+xml; charset=utf-8" />
                 </Head>
                 <body>
                 <Main />
