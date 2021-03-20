@@ -6,7 +6,7 @@ export const FullPage = styled(Grid)`
 `;
 
 export const FullPageGrid = styled(Grid)`
-    height: 100%;
+    min-height: 100%;
 `
 
 export const AbsoluteGrid = styled(Grid)`

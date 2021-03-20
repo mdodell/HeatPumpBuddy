@@ -10,5 +10,13 @@ module.exports = {
 
         return config;
     },
-    target: "serverless"
+    target: "serverless",
+    async rewrites() {
+        return [
+            {
+                source: '/api/:path*',
+                destination: 'https://still-chamber-03197.herokuapp.com/:path*' // Proxy to Backend
+            }
+        ];
+    }
 };
