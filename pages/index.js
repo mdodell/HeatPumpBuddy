@@ -106,7 +106,7 @@ export default function Index() {
                           <Grid item xs={4} container justify="center" alignItems="flex-end">
                               <SVG src="/svgs/goals.svg" />
                                   <TypographyWhite variant={isMobile ? "h6" : "h2"} fontWeight={300} gutterBottom>
-                                      Connect with a specialist
+                                      Connect with a coach
                                   </TypographyWhite>
                           </Grid>
 
@@ -137,7 +137,7 @@ export default function Index() {
                                       <EcoIcon />Climate Change
                                   </Typography>
                                   <Typography variant="h6" align="left">
-                                      Control your home’s climate and minimally impact the environment
+                                      Control your home’s climate and minimally impact the environment.
                                   </Typography>
                               </Grid>
                               <Grid item xs={12} container alignContent='flex-start'>
@@ -145,7 +145,7 @@ export default function Index() {
                                       <EcoIcon />Carbon Emissions
                                   </Typography>
                                   <Typography variant="h6" align="left">
-                                      Decrease your carbon footprint and utility bill
+                                      Decrease your carbon footprint and utility bill.
                                   </Typography>
                               </Grid>
                               <Grid item xs={12} container alignContent='flex-start'>
@@ -153,7 +153,10 @@ export default function Index() {
                                       <EcoIcon />Massachusetts State Goals
                                   </Typography>
                                   <Typography variant="h6" align="left">
-                                      Utilize benefits through the Commonwealth’s initiatives to reduce emissions
+                                      Utilize benefits through the Commonwealth’s initiatives to reduce emissions.
+                                      <br />
+                                      <br />
+                                      The Massachusetts 2050 Decarbonization Roadmap calls for the Commonwealth to achieve net zero carbon emissions by 2050 and identifies heat pumps as one of the five "systems transformations" needed to meet that goal
                                   </Typography>
                               </Grid>
                           </Grid>

@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
-import Stepper from "../components/Header/components/Stepper";
+import Stepper from "../components/CalculatorForm/Stepper";
 import CalculatorBackground from "../components/CalculatorForm/components/CalculatorBackground";
 import CoachForm from "../components/CalculatorForm/components/CoachForm";
 import CostForm from "../components/CalculatorForm/components/CostForm";
@@ -93,7 +93,8 @@ function Calculator(props) {
                                                                  </Grid>
                                                                 </Grid>
                                                             <Grid item xs={12} md={6} container justify={isMobile ? "center" : "flex-start"}>
-                                                                <Button fullWidth size="small" variant="contained" color="secondary" endIcon={<EmailIcon />} href={`mailto:${coach.email}`}>
+                                                                <Button fullWidth size="small" variant="contained" color="secondary" endIcon={<EmailIcon />}
+                                                                        href={`mailto:${coach.email}?subject=Heat Pump Inquiry: Intro Conversation&body=Hello ${coach.email.split(" ")[0]},%0D%0A%0D%0A I wanted to talk to you about getting started with a Heat Pump in my home.`}>
                                                                     Email {coach.name.split(" ")[0]}
                                                                 </Button>
                                                             </Grid>

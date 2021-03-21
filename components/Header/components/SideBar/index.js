@@ -22,13 +22,19 @@ function SideBar({setDrawer, setDrawerOpen}) {
                 </Box>
                 <Lottie animationData={JSON.parse(globeAnimation)} />
                 <SideBarLink>
-                    <Link href="/calculator"><A onClick={() => setDrawerOpen(false)}>Connect to a Heat Pump Coach</A></Link>
+                    <Link href="/calculator"><A onClick={() => setDrawerOpen(false)}>Calculate Your Savings</A></Link>
                     <Box mt={2}>
                         <Divider />
                     </Box>
                 </SideBarLink>
                 <SideBarLink>
-                    <A href="https://heatsmartalliance.org/resources/" target="_blank"onClick={() => setDrawerOpen(false)}>What is a Heat Pump?</A>
+                    <A href="https://heatsmartalliance.org/resources/" target="_blank"onClick={() => setDrawerOpen(false)}>Heat Smart Alliance's Resources</A>
+                    <Box mt={2}>
+                        <Divider />
+                    </Box>
+                </SideBarLink>
+                <SideBarLink>
+                    <A href="https://sealed.com/climate-control/" target="_blank"onClick={() => setDrawerOpen(false)}>What is a Heat Pump?</A>
                     <Box mt={2}>
                         <Divider />
                     </Box>
