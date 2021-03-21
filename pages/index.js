@@ -91,7 +91,7 @@ export default function Index() {
                       <Grid item xs={12}>
                           <Box textAlign="center">
                               <TypographyWhite variant="h1">
-                                  Easy Installation process
+                                 Getting Started
                               </TypographyWhite>
                           </Box>
                       </Grid>
@@ -99,21 +99,21 @@ export default function Index() {
                           <Grid item xs={4} container justify="center" alignItems="flex-end">
                               <SVG src="/svgs/calculator.svg" />
                               <TypographyWhite variant={isMobile ? "h6" : "h2"} fontWeight={300} gutterBottom>
-                                  Estimate Savings
+                                  Estimate <br />Savings
                               </TypographyWhite>
                           </Grid>
 
                           <Grid item xs={4} container justify="center" alignItems="flex-end">
                               <SVG src="/svgs/goals.svg" />
                                   <TypographyWhite variant={isMobile ? "h6" : "h2"} fontWeight={300} gutterBottom>
-                                      Connect with a Specialist
+                                      Connect with a specialist
                                   </TypographyWhite>
                           </Grid>
 
                           <Grid item xs={4} container justify="center" alignItems="flex-end">
                               <SVG src="/svgs/savings.svg" />
                               <TypographyWhite variant={isMobile ? "h6" : "h2"} fontWeight={300} gutterBottom>
-                                  Begin {isMobile ? <br /> : ''}Saving!
+                                  Get your system and start saving
                               </TypographyWhite>
                           </Grid>
                       </Grid>
@@ -137,7 +137,7 @@ export default function Index() {
                                       <EcoIcon />Climate Change
                                   </Typography>
                                   <Typography variant="h6" align="left">
-                                      Control your home’s climate without impacting the environment
+                                      Control your home’s climate and minimally impact the environment
                                   </Typography>
                               </Grid>
                               <Grid item xs={12} container alignContent='flex-start'>
@@ -150,7 +150,7 @@ export default function Index() {
                               </Grid>
                               <Grid item xs={12} container alignContent='flex-start'>
                                   <Typography variant="h4" color="primary" align="left">
-                                      <EcoIcon />Massachusetts
+                                      <EcoIcon />Massachusetts State Goals
                                   </Typography>
                                   <Typography variant="h6" align="left">
                                       Utilize benefits through the Commonwealth’s initiatives to reduce emissions

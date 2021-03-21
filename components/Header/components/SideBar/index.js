@@ -28,7 +28,7 @@ function SideBar({setDrawer, setDrawerOpen}) {
                     </Box>
                 </SideBarLink>
                 <SideBarLink>
-                    <Link href="/calculator"><A onClick={() => setDrawerOpen(false)}>What is a Heat Pump?</A></Link>
+                    <A href="https://heatsmartalliance.org/resources/" target="_blank"onClick={() => setDrawerOpen(false)}>What is a Heat Pump?</A>
                     <Box mt={2}>
                         <Divider />
                     </Box>
