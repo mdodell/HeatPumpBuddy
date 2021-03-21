@@ -18,10 +18,10 @@ function CostForm({setResponse, handleNext, initialValues}) {
                 <form onSubmit={handleSubmit} noValidate>
                     <Grid container alignItems="flex-start" spacing={2}>
                         <Grid item xs={12}>
-                            <TextField label="Current Heating Cost" required name="currentCost" type="number" />
+                            <TextField label="Current Annual Heating Cost" required name="currentCost" type="number" />
                         </Grid>
                         <Grid item xs={12}>
-                            <TextField label="Estimated Heat Pump Cost" required name="heatPumpCost" type="number" />
+                            <TextField label="Estimated Annual Heat Pump Cost" required name="heatPumpCost" type="number" />
                         </Grid>
                         <Grid item style={{ marginTop: 16 }} container justify="flex-end">
                             <Button
