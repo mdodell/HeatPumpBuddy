@@ -18,6 +18,5 @@ export const AbsoluteGrid = styled(Grid)`
 export const FullGridItem = styled(Grid).attrs({
     item: true
 })`
-    height: 100%;
     padding-top: 64px;
 `;
