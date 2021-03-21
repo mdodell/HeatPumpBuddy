@@ -9,8 +9,9 @@ import {Form} from "react-final-form";
 function CoachForm({setResponse, handleNext, handleBack}) {
     return (
         <Form
-            onSubmit={(values) => {
-                houseInfoSubmit(values).then(data => setResponse(data))
+            onSubmit={async (values) => {
+                const houseInfo = await houseInfoSubmit(values)
+                setResponse(houseInfo);
                 handleNext()
             }}
             validate={houseInfoValidate}

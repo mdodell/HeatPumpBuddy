@@ -10,6 +10,7 @@ import {
 } from '@devexpress/dx-react-chart-material-ui';
 import { withStyles } from '@material-ui/core/styles';
 import { Animation } from '@devexpress/dx-react-chart';
+import {StepPaper} from "../../../pages/calculator";
 
 const format = () => tick => tick;
 const legendStyles = () => ({
@@ -46,6 +47,7 @@ const Item = withStyles(legendItemStyles, { name: 'LegendItem' })(legendItemBase
 const demoStyles = () => ({
     chart: {
         paddingRight: '20px',
+        maxWidth: "100%"
     },
     title: {
         whiteSpace: 'pre',

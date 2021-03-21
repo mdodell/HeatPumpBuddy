@@ -4,11 +4,12 @@ import {SVG} from "../../SVG";
 import useResizeHandler from "../../../hooks/useResizeHandler";
 
 function CalculatorBackground({step}) {
-    const [isMobile, isTablet] = useResizeHandler()
+    const [isMobile, isTablet] = useResizeHandler();
+    const isDesktop = (!isMobile && !isTablet);
     return (
         <AbsoluteGrid container>
-            <FullGridItem xs={12} container alignItems="flex-end">
-                <SVG src="/svgs/empty_street.svg" alt="suburbs" height={(!isMobile && !isTablet) ? "100%" : undefined}/>
+            <FullGridItem xs={12} container alignContent={isDesktop ? "center" : "flex-end"}>
+                <SVG src="/svgs/empty_street.svg" alt="empty_street" height={isDesktop ? "100%" : undefined}/> 
             </FullGridItem>
         </AbsoluteGrid>
     );

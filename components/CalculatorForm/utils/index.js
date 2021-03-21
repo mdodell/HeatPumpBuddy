@@ -14,7 +14,7 @@ export const houseInfoSubmit = ({year, size, stories, cost, houseType}) => {
         },
         body: JSON.stringify({...dataToSend})
     }).then(res => res.json()).then(data => {
-        console.log("Data was", data);
+        console.log("returning this data", data)
         return data;
     });
 };
