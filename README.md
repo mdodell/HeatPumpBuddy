@@ -3,6 +3,10 @@ HeatPumpBudy is a website made for DeisHacks 2021 to help the [HeatSmartAlliance
 
 The website uses a Python API with a nearest-neighbor machine learning algorithm to recommend heat pump coaches to users based on home size, age, location, and the type of home.
 
+## Links
+* [DevPost Submission](https://devpost.com/software/heatpumpbuddy)
+* [Pitch Video](https://www.youtube.com/watch?v=UdXs2Ub1hL0)
+
 ## What it does and how it helps the HeatSmartAlliance
 Our application fulfills two needs: it gives the HSA an up-to-date and visually appealing web presence, while also being a resource hub for someone new to heat pumps to learn about why they are important and how they can be beneficial to them.
 
