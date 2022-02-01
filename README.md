@@ -1,33 +1,17 @@
-# Redux example
+# About
+HeatPumpBudy is a website made for DeisHacks 2021 to help the [HeatSmartAlliance](https://heatsmartalliance.org/). HeatPumpBuddy promotes the usage of heat pumps to help fight in the battle against carbon emissions and greenhouse gases.
 
-This example shows how to integrate Redux in Next.js.
+The website uses a Python API with a nearest-neighbor machine learning algorithm to recommend heat pump coaches to users based on home size, age, location, and the type of home.
 
-Usually splitting your app state into `pages` feels natural but sometimes you'll want to have global state for your app. This is an example on how you can use Redux that also works with Next.js's universal rendering approach.
+## What it does and how it helps the HeatSmartAlliance
+Our application fulfills two needs: it gives the HSA an up-to-date and visually appealing web presence, while also being a resource hub for someone new to heat pumps to learn about why they are important and how they can be beneficial to them.
 
-In the first example we are going to display a digital clock that updates every second. The first render is happening in the server and then the browser will take over. To illustrate this, the server rendered clock will have a different background color (black) than the client one (grey).
+The HSA can connect a CSV file of their heat pump coaches and their information to our machine learning algorithm, so that way homeowners can be connected with coaches that best suit their personal needs.
 
-To illustrate SSG and SSR, go to `/ssg` and `/ssr`, those pages are using Next.js data fetching methods to get the date in the server and return it as props to the page, and then the browser will hydrate the store and continue updating the date.
+## How we built it
+HeatPumpBuddy was built using the NextJS and React framework, along with a Flask machine learning API. We designed the application in Figma before bringing it to life through our development process. It is fully responsive on both mobile, tablet, and web so anyone can use this website at any time - whether they are researching options at home or on the bus to work.
 
-The trick here for supporting universal Redux is to separate the cases for the client and the server. When we are on the server we want to create a new store every time, otherwise different users data will be mixed up. If we are in the client we want to use always the same store. That's what we accomplish on `store.js`.
+The machine-learning algorithm allows users to enter information about their home and matches them with 3 heat coaches using a nearest-neighbor algorithm, so they can choose the coach who best suits their needs and preferences. The website is SEO optimized with Next, so someone looking up heat pumps would find our website and be able to learn more.
 
-All components have access to the Redux store using `useSelector`, `useDispatch` or `connect` from `react-redux`.
+The website is hosted on Netlify for easy deployment, while the API is hosted on Heroku.
 
-On the server side every request initializes a new store, because otherwise different user data can be mixed up. On the client side the same store is used, even between page changes.
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-redux with-redux-app
-# or
-yarn create next-app --example with-redux with-redux-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
